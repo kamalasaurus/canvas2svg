@@ -11,7 +11,7 @@
  *  Copyright (c) 2014 Gliffy Inc.
  */
 
-;(function () {
+export default (function () {
     "use strict";
 
     var STYLES, ctx, CanvasGradient, CanvasPattern, namedEntities;
@@ -1202,13 +1202,15 @@
     ctx.prototype.setTransform = function () {};
 
     //add options for alternative namespace
-    if (typeof window === "object") {
-        window.C2S = ctx;
-    }
+    //if (typeof window === "object") {
+        //window.C2S = ctx;
+    //}
 
-    // CommonJS/Browserify
-    if (typeof module === "object" && typeof module.exports === "object") {
-        module.exports = ctx;
-    }
+    //// CommonJS/Browserify
+    //if (typeof module === "object" && typeof module.exports === "object") {
+        //module.exports = ctx;
+    //}
+
+    return ctx;
 
 }());
